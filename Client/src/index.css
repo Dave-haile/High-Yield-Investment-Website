@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 280 100% 70%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 280 100% 70%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --pitch-hero: 0 0% 98%;
+    --pitch-subtitle: 0 0% 80%;
+    --pitch-contact: 45 100% 60%;
+    --pitch-bg-overlay: 0 0% 0%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(280 100% 70% / 0.1), hsl(200 100% 70% / 0.1));
+    --gradient-text: linear-gradient(135deg, hsl(280 100% 80%), hsl(200 100% 80%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(280 100% 70% / 0.3);
+    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode uses same colors since the design is inherently dark */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+.no-scrollbar{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
